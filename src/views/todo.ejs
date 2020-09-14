@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/styles.css" rel="stylesheet" />
+    <script src="/jquery.min.js" type="text/javascript"></script>
+    <script src="/todo-list.js" type="text/javascript"></script>
+    <title>Todo</title>
+  </head>
+
+  <body>
+    <h1>Todo Apps</h1>
+    <div id="todo-table">
+      <form method="POST" action="/todo">
+        <input type="text" />
+        <button type="submit">Submit</button>
+      </form>
+      <ul>
+        <% item.map(val => { %>
+        <li><%= val.name %></li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>
